@@ -5,10 +5,10 @@ def is_pangram(sentence):
     # Remove duplicates with set, and make lowercase:
     remove_dupes = "".join(set(sentence)).lower()
     print(f"remove_dupes = {remove_dupes}")
-    # Sort a from a - z:
+    # Sort remove_dupes from a - z:
     sort_string = "".join(sorted(remove_dupes))
     print(f"sort_string = {sort_string}")
-    # Remove non-letters from b:
+    # Remove non-letters from sort_string:
     just_letters = re.sub(non_letters, "", sort_string)
     if just_letters.lower() == "abcdefghijklmnopqrstuvwxyz":
         print(f"just_letters = {just_letters}")
